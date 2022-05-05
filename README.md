@@ -1,6 +1,7 @@
 # upstream
-**This repo acts as an upstream for exercising repository usage and management by command line. The repo expected to alter is `hello-world`.**
+**This repo records several experiments for exercising repository usage and management through command line. The repo expected to alter is `hello-world`.**
 
+# todo
 Management actions include: 
 * Configure an origin repo.
 * Fork / Add `upstream` (as a fork) into origin repo (`hello-world`).
@@ -10,20 +11,25 @@ Management actions include:
 *This read-me file might be too long to read. I'm seeking for some acceptable solution.*
 
 # Samples
-## Grammar ABC:
+## Basic Git knowledge:
 * To change directory, type ``cd <path>``. Same as other terminals or bash shells.
 * To show verbose log of the corresponding remote repo `hello-world`., type ``git remote -v``.
-* More: refer to https://docs.github.com/cn/get-started/using-git/about-git
+* For more grammar and usage, refer to https://docs.github.com/cn/get-started/using-git/about-git.
+* Being local means on this machine. Being remote means on GitHub.
+## Environment
+**Local:** I have already created an empty directory called `repo` under local path `G:\\Git` for any further operation. Initial path is `G:/git/repo`.
 
-## Target: Configure local repo by cloning from reomte repo.
-Being local means on this machine. 
-Being remote means on GitHub.
-I create a directory called `repo` under path `G:\\git` for any further operation.
-### bash code
-    cd G:/git/repo
-    # Create local clone of `hello-world`, which would be operated by all means.
+**Remote:** Two relevent repos.
+* A target repo `hello-world` at `https://github.com/zhu-yuefeng/hello-world`, containing nothing but a `readme.md` file at first. During the experiment a request to add another markdown file called `edit.md` will be pushed.
+* A documentary repo `upstream` at `https://github.com/zhu-yuefeng/upstream`, containing a `readme.md` file which illustrates all experiment steps and expected results.
+
+## Target: Configure local repo by cloning from remote repo.
+Create local clone of `hello-world`, which would be operated by all means.
+>
     git clone https://github.com/zhu-yuefeng/hello-world.git
-### expected output
+
+>
+    >
     Cloning into 'hello-world'...
     remote: Enumerating objects: 7, done.
     remote: Counting objects: 100% (7/7), done.
@@ -31,32 +37,41 @@ I create a directory called `repo` under path `G:\\git` for any further operatio
     remote: Total 7 (delta 1), reused 0 (delta 0), pack-reused 0
     Receiving objects: 100% (7/7), done.
     Resolving deltas: 100% (1/1), done.
-### bash code
+    
+Print information about `hello-world` in remote repository.
+>
     cd hello-world
     git remote -v
-### expected output
+>
+    >
     origin  https://github.com/zhu-yuefeng/hello-world.git (fetch)
     origin  https://github.com/zhu-yuefeng/hello-world.git (push)
 
 ## Target: Make local changes and push to GitHub.
-### bash code
-    # create a new branch to store any new changes
+Create a new branch (line of development) to store any new changes. Then switch to it.
+>
     git branch my-branch
-
-    # switch to that branch (line of development)
     git checkout my-branch
+>
+    >
+    Switched to branch 'my-branch'
 
-    # make changes, for example, create a file named `edit.md`under the same directory as `readme.md`.
-
-    # stage the changed files
+Make changes, for example, create a file named `edit.md`under the same directory as `readme.md`. Stage the changed files through `git add <file_name>`.
+Take a snapshot of the staging area (anything that's been added). `-m "my snapshot"` is a label to notify what is it.
+>
     git add edit.md
-
-    # take a snapshot of the staging area (anything that's been added)
     git commit -m "my snapshot"
+>
+    >
+    [my-branch c443b56] my snapshot
+     1 file changed, 2 insertions(+)
+     create mode 100644 edit.md
 
-    # push changes to github
+Push changes to github.
+>
     git push --set-upstream origin my-branch
-### expected output
+>
+    >
     Enumerating objects: 4, done.
     Counting objects: 100% (4/4), done.
     Delta compression using up to 8 threads
