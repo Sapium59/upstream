@@ -1,5 +1,5 @@
 # upstream
-**This repo acts as an upstream for a developer (myself) to exercise repository usage and management in git.**
+**This repo acts as an upstream for exercising repository usage and management by command line.**
 
 Management actions include: 
 * Configure environment as origin repo,
