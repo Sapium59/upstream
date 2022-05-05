@@ -23,6 +23,15 @@ I create a directory called `repo` under path `G:\\git` for any further operatio
     cd G:/git/repo
     # Create local clone of `hello-world`, which would be operated by all means.
     git clone https://github.com/zhu-yuefeng/hello-world.git
+### expected output
+    Cloning into 'hello-world'...
+    remote: Enumerating objects: 7, done.
+    remote: Counting objects: 100% (7/7), done.
+    remote: Compressing objects: 100% (5/5), done.
+    remote: Total 7 (delta 1), reused 0 (delta 0), pack-reused 0
+    Receiving objects: 100% (7/7), done.
+    Resolving deltas: 100% (1/1), done.
+### bash code
     cd hello-world
     git remote -v
 ### expected output
