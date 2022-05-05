@@ -2,9 +2,10 @@
 **This repo acts as an upstream for exercising repository usage and management by command line.**
 
 Management actions include: 
-* Configure environment as origin repo,
-* add this repo (as a fork) locally into origin repo,
-* update local change to upstream (source) remote repo.
+* Configure an origin repo, i.e. `hello-world`, as the repo that should be covered by `upstream`.
+* Fork / Add `upstream` (as a fork) into origin repo (`hello-world`).
+* Merge / Synchronize: copy changes in `upstream` into `hello-world` while my local changes in `hello-world` should be remained. 
+* Update local change to upstream (source) remote repo.
 
 *This read-me file might be too long to read. I'm seeking for some acceptable solution.*
 
@@ -39,3 +40,4 @@ I create a directory called `repo` under path `G:\\git` for following operations
     upstream        https://github.com/zhu-yuefeng/upstream (fetch)
     upstream        https://github.com/zhu-yuefeng/upstream (push)
 
+## Target: Merge remote repo to loocal repo (**I didn't made it**)
