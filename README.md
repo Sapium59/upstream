@@ -3,8 +3,8 @@
 
 # todo
 Management actions include: 
-* Configure an origin repo.
-* Fork / Add `upstream` (as a fork) into origin repo (`hello-world`).
+* Configure local repository by cloning from remote repo.
+* Push local changes to GitHub.
 * Merge / Synchronize: copy changes in `upstream` into `hello-world` while my local changes in `hello-world` should be remained. 
 * Update local change to upstream (source) remote repo.
 
