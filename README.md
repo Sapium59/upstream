@@ -1,9 +1,9 @@
 # upstream
 **This repo records several experiments for exercising repository usage and management through command line. The repo expected to alter is `hello-world`.**
 
-# todo
-Management actions include: 
-* Configure local repository by cloning from remote repo.
+# Management actions list 
+* Configure a local repository by cloning from a remote repo.
+* Fetch (download) changed files from a rempte repo.
 * Push local changes to GitHub.
 * Merge / Synchronize: copy changes in `upstream` into `hello-world` while my local changes in `hello-world` should be remained. 
 * Update local change to upstream (source) remote repo.
@@ -46,6 +46,22 @@ Print information about `hello-world` in remote repository.
     >
     origin  https://github.com/zhu-yuefeng/hello-world.git (fetch)
     origin  https://github.com/zhu-yuefeng/hello-world.git (push)
+
+## Target: Fetch changed files from a rempte repo.
+This should be done when remote repo is updated while local one is not. Fetch right after cloning makes no sense.
+> 
+    cd hello-world
+    git remote -v
+>
+    >
+    origin  https://github.com/zhu-yuefeng/hello-world.git (fetch)
+    origin  https://github.com/zhu-yuefeng/hello-world.git (push)
+>
+    git fetch origin
+>    
+    >
+    ??????
+    
 
 ## Target: Make local changes and push to GitHub.
 Create a new branch (line of development) to store any new changes. Then switch to it.
