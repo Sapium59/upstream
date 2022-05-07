@@ -70,6 +70,15 @@ Now we know there is a "fetchable" called `origin`. Let's fetch it from remote.
     From https://github.com/zhu-yuefeng/hello-world
        6ff71bc..e36c97e  main       -> origin/main
 
+## Target: Merge a pulled repo to local repo.
+Follow the grammar `git merge <remote_name>/<branch_name>`. Usually they are `origin` and `main` respectively.
+>
+    git merge origin/main
+>
+    >
+    Updating c443b56..e36c97e
+    Fast-forward
+
 
 ## Target: Make local changes and push to GitHub.
 Create a new branch (line of development) to store any new changes. Then switch to it.
