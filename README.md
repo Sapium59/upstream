@@ -47,7 +47,7 @@ Print information about `hello-world` in remote repository.
     origin  https://github.com/zhu-yuefeng/hello-world.git (fetch)
     origin  https://github.com/zhu-yuefeng/hello-world.git (push)
 
-## Target: Fetch changed files from a rempte repo.
+## Target: Fetch changed files from a rempte repo and merge it into local repo.
 This should be done when remote repo is updated while local one is not. Fetch right after cloning makes no sense.
 > 
     cd hello-world
@@ -70,7 +70,8 @@ Now we know there is a "fetchable" called `origin`. Let's fetch it from remote.
     From https://github.com/zhu-yuefeng/hello-world
        6ff71bc..e36c97e  main       -> origin/main
 
-## Target: Merge a pulled repo to local repo.
+Now we can merge the fetched repo to local repo.
+
 Follow the grammar `git merge <remote_name>/<branch_name>`. Usually they are `origin` and `main` respectively.
 >
     git merge origin/main
@@ -79,6 +80,7 @@ Follow the grammar `git merge <remote_name>/<branch_name>`. Usually they are `or
     Updating c443b56..e36c97e
     Fast-forward
 
+***Note: this whole target can be accomplished by simply `git pull <remote_name> <branch_name>`.
 
 ## Target: Make local changes and push to GitHub.
 Create a new branch (line of development) to store any new changes. Then switch to it.
