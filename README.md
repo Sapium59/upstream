@@ -56,12 +56,20 @@ This should be done when remote repo is updated while local one is not. Fetch ri
     >
     origin  https://github.com/zhu-yuefeng/hello-world.git (fetch)
     origin  https://github.com/zhu-yuefeng/hello-world.git (push)
+Now we know there is a "fetchable" called `origin`. Let's fetch it from remote. 
+
+*Note: A little change is made on remote so we have a repo from the local repo, making the fetch useful.
 >
     git fetch origin
 >    
     >
-    ??????
-    
+    remote: Enumerating objects: 1, done.
+    remote: Counting objects: 100% (1/1), done.
+    remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+    Unpacking objects: 100% (1/1), 620 bytes | 9.00 KiB/s, done.
+    From https://github.com/zhu-yuefeng/hello-world
+       6ff71bc..e36c97e  main       -> origin/main
+
 
 ## Target: Make local changes and push to GitHub.
 Create a new branch (line of development) to store any new changes. Then switch to it.
