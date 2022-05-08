@@ -1,10 +1,10 @@
 # upstream
 **This repo shows how to manage interactions between a local repo and a remote repo though `GitBash`.**  
-**The repo expected to alter is `hello-world`.**
+**The repo expected to be altered is `hello-world`.**
 
 # Management interactions list 
 * Clone: configure a local repository by cloning from a remote repo.  
-* Pull: fetch changed files from a rempte repo and merge it into local repo).  
+* Pull: fetch changed files from a rempte repo and merge it into local repo.  
 * Push: push local change to remote repo on GitHub.  
 
 *In this file, bash inputs are written as code, while expected outputs are written as code beginning with a line of one `>`.*  
@@ -14,8 +14,9 @@
 ## Basic Git knowledge:
 * To change directory, type ``cd <path>``. Same as other terminals or bash shells.
 * To show verbose log of the corresponding remote repo `hello-world`., type ``git remote -v``.
-* For more grammar and usage, refer to https://docs.github.com/cn/get-started/using-git/about-git.
-* Being **local** means on this machine. Being **remote** means online on GitHub.
+* For more grammar and usage, refer to https://docs.github.com/cn/get-started/using-git/about-git, or https://training.github.com/downloads/zh_CN/github-git-cheat-sheet/.
+* Being **local** means on this machine. The `git init` operation works to create a local repo.  
+Being **remote** means online on GitHub. It is updated only by `git push`.
 
 ## Environment
 **Local:** I have already created an empty directory called `repo` under local path `G:\\Git` for any further operation. Initial path is `G:/git/repo`.  
